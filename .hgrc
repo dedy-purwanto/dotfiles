@@ -1,0 +1,4 @@
+[ui]
+ssh = ssh -C
+username = Dedi Purwanto <kecebongsoft@gmail.com>
+editor = vim
