@@ -102,7 +102,15 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias tmux="tmux -2"
-
 export PS1='\w➤ '
 export TERM=screen-256color
+
+# ====================================
+# TMUX
+# ====================================
+alias tmux="tmux -2"
+
+# ====================================
+# PYTHON
+# ====================================
+export PIP_DOWNLOAD_CACHE=/tmp/pip_cache
