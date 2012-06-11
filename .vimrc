@@ -1,3 +1,5 @@
+" Must install vundle before installing all of these plugins
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
