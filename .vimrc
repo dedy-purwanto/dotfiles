@@ -161,7 +161,7 @@ nnoremap <silent><C-h> :tabprevious<cr>
 nnoremap <C-A-a> <C-a>
 
 "Fast edit and reload vimrc
-nnoremap <leader>ev :tabnew ~/.vim/.vimrc<cr>
+nnoremap <leader>ev :tabnew ~/.vimrc<cr>
 nnoremap <leader>er :source ~/.vimrc<cr>
 
 " Resize splits when the window is resized
