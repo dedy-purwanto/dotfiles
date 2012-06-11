@@ -167,6 +167,10 @@ nnoremap <leader>er :source ~/.vimrc<cr>
 " Resize splits when the window is resized
 au VimResized * exe "normal! \<c-w>="
 
+" Disable man page shortcut, I always accidentally press S-K and things wiped
+" out
+nnoremap <S-k> <ESC>
+nnoremap <S-K> <ESC>
 
 "-----------------------------------------------------------------
 "Plugin Configurations
@@ -195,34 +199,3 @@ let g:ctrlp_prompt_mappings = {
 \}
 nnoremap <silent><leader>f :CtrlP<cr>
 
-" [git-scm-breeze] Show the git repository status of the currently active file
-function! GitStatus()
-    !clear && cd %:p:h && clear && echo %:p:h && git_status_shortcuts
-endfunction
-
-" [git-scm-breeze] add the currently edited file to the list of commited changes
-" and immediately enter the commit messages
-" this is only meant for quick fixing of a single file
-function! GitAddAndCommitSingle()
-    !clear && cd %:p:h && clear && echo %:p:h && git_add_and_commit %:p
-endfunction
-
-" [git-scm-breeze] add all new and edited files for commit
-" and immediately enter the commit messages
-function! GitAddAndCommitAll()
-    !clear && cd %:p:h && git_add_shortcuts 1-9999 && clear && echo %:p:h && git_add_and_commit 1-9999
-endfunction
-
-nnoremap <leader>gs :call GitStatus()<cr>
-nnoremap <leader>gc :call GitAddAndCommitSingle()<cr>
-nnoremap <leader>ga :call GitAddAndCommitAll()<cr>
-
-"-----------------------------------------------------------------
-"Python specific configuration
-"-----------------------------------------------------------------
-
-"Add comment block
-nnoremap <leader>pc <S-o>"""<CR><CR>"""<ESC>ki
-
-nnoremap <S-k> <ESC>
-nnoremap <S-K> <ESC>
