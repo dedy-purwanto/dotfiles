@@ -114,3 +114,8 @@ alias tmux="tmux -2"
 # PYTHON
 # ====================================
 export PIP_DOWNLOAD_CACHE=/tmp/pip_cache
+
+# ===================================
+# Auto reload Xresources whenever urxvt is started
+# ===================================
+alias urxvt="xrdb -load ~/.Xresources && urxvt"
