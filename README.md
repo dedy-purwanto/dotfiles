@@ -3,7 +3,13 @@ dot files
 
 List of my personal dot files
 
-minimum tmux version is 1.7 (to enable status bar at the top)
+
+terminal: urxvt
+multiplexer: tmux (1.7)
+editor: vim
+
+make sure directory ~/.urxvt exists!
+
 
 Cloning
 -------------
