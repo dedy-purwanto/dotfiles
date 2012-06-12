@@ -48,7 +48,9 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,tabbed
+URxvt.perl-ext-common:      default,matcher
+URxvt.perl-lib:      /home/kecebongsoft/.urxvt
+URxvt.perl-ext:      default,tabbedex
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          chrome
 
