@@ -4,5 +4,5 @@ ln -f .vimrc ~/
 ln -f .tmux.conf ~/
 ln -f .gitconfig ~/
 ln -f .hgrc ~/
-ln -f .dircolors ~/
+ln -f ls-colors-solarized/dircolors ~/.dircolors
 ln -f .Xmodmap ~/
