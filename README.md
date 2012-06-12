@@ -3,6 +3,8 @@ dot files
 
 List of my personal dot files
 
+minimum tmux version is 1.7 (to enable status bar at the top)
+
 Cloning
 -------------
 The repository has some submodules to apply custom colors and stuff which lie
