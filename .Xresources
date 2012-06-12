@@ -1,5 +1,5 @@
 URxvt.scrollBar:    false
-URxvt.font: xft:Ubuntu Mono:normal:size=9
+URxvt.font: xft:Ubuntu Mono:normal:size=9.5
 URxvt*termName:screen-256color
 !URxvt.tabbed.tabbar-fg: 2
 !URxvt.tabbed.tabbar-bg: 0
