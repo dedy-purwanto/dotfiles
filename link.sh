@@ -8,5 +8,5 @@ ln -f .Xmodmap ~/
 ln -f .Xresources ~/
 
 ln -f ls-colors-solarized/dircolors ~/.dircolors
-ln -f urxvt-tabbedex/tabbedex ~/.urxvt
+ln -f urxvt-tabbedex/tabbedex ~/.urxvt/
 sh gnome-terminal-colors-solarized/set_dark.sh
