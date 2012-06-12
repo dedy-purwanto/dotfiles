@@ -4,3 +4,6 @@
 [submodule "ls-colors-solarized"]
 	path = ls-colors-solarized
 	url = git://github.com/sigurdga/ls-colors-solarized.git
+[submodule "urxvt-tabbedex"]
+	path = urxvt-tabbedex
+	url = git://github.com/stepb/urxvt-tabbedex.git
