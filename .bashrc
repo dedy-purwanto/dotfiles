@@ -102,7 +102,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PS1='\n\w➤ '
+PS1='${debian_chroot:+($debian_chroo)}\w ➤ '
 export TERM=screen-256color
 
 # ====================================
