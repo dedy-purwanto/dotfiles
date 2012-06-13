@@ -19,5 +19,11 @@ repositories as well:
 ```bash
  git submodule init 
  git submodule update 
- ./link.sh 
+ ./setup.sh (for first time) or ./link.sh (for second time)
+```
+
+for vim, run command ``:BundleInstall`` first and then go to ./vim/bundle/pyflakes-vim/ and do:
+```
+git submodule init
+git submodule update
 ```
