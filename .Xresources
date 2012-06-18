@@ -1,4 +1,3 @@
-URxvt.scrollBar:    false
 URxvt.font: xft:Ubuntu Mono:bold:size=9
 URxvt*termName:screen-256color
 !URxvt.tabbed.tabbar-fg: 2
