@@ -16,6 +16,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/L9'
+Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
 " Core toggles for vim in order to support other customized stuff
