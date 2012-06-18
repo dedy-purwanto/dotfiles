@@ -119,3 +119,10 @@ export PIP_DOWNLOAD_CACHE=$HOME/pipcache
 # Auto reload Xresources whenever urxvt is started
 # ===================================
 alias urxvt="xrdb -load ~/.Xresources && urxvt"
+
+# ===================================
+# git shortcutes
+# ===================================
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
