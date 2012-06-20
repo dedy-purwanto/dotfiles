@@ -95,8 +95,8 @@ set dir=~/.vim/swaps//,/var/tmp//,/tmp//,. "Set swap dir
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 
 "Theme
-set background=dark
-colorscheme jellybeans
+"set background=dark
+"colorscheme jellybeans
 
 let mapleader ="," "Leader key
 
