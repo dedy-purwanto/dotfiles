@@ -16,6 +16,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/L9'
+Bundle 'vim-scripts/jellybeans'
 Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
@@ -95,7 +96,7 @@ set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 
 "Theme
 set background=dark
-colorscheme solarized
+colorscheme jellybeans
 
 let mapleader ="," "Leader key
 
