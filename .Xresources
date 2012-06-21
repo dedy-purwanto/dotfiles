@@ -26,8 +26,6 @@ URxvt.depth:                4
 URxvt.geometry:             90x30
 URxvt.transparent:          false
 URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
 URxvt.loginShell:           true
 URxvt.saveLines:            50
 URxvt.internalBorder:       0
@@ -35,8 +33,6 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-!URxvt.realBold:           true
-!URxvt.font:                 -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 
 ! Fix font space
 URxvt*letterSpace: 0
