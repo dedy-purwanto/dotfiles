@@ -2,3 +2,9 @@
 ssh = ssh -C
 username = Dedi Purwanto <kecebongsoft@gmail.com>
 editor = vim
+
+[extensions]
+color =
+
+[color]
+mode = auto
