@@ -1,4 +1,4 @@
-URxvt.font: xft:Ubuntu Mono:bold:pixelsize=12
+URxvt.font: xft:Terminus:bold:pixelsize=12
 URxvt*termName:screen-256color
 !URxvt.tabbed.tabbar-fg: 7
 !URxvt.tabbed.tabbar-bg: 0
@@ -10,9 +10,9 @@ URxvt.tabbed.tab-bg:    10
 !-------------------------------------------------------------------------------
 
 Xft.dpi:                    96
-Xft.antialias:              true
-Xft.rgba:                   rgb
-Xft.hinting:                true
+Xft.antialias:              false
+Xft.rgba:                   grayscale
+Xft.hinting:                false
 Xft.hintstyle:              hintslight
 
 !-------------------------------------------------------------------------------
@@ -22,7 +22,7 @@ Xft.hintstyle:              hintslight
 ! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
 !-------------------------------------------------------------------------------
 
-URxvt.depth:                16
+URxvt.depth:                4
 URxvt.geometry:             90x30
 URxvt.transparent:          false
 URxvt.fading:               0
@@ -35,10 +35,11 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           true
-/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
+!URxvt.realBold:           true
+!URxvt.font:                 -*-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 
 ! Fix font space
-URxvt*letterSpace: -1
+URxvt*letterSpace: 0
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
