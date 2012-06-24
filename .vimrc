@@ -72,7 +72,8 @@ set dictionary=/usr/share/dict/words "Dictionary, also used for completion
 set formatoptions=qrn1 "Format for pasting text
 set nobackup "Don't create backup
 set wrap "Wrap on
-set textwidth=80 "Wrap (or autobreak if possible, usually on comments) at column 80
+set textwidth=72 "Wrap (or autobreak if possible, usually on comments) at column 80
+set colorcolumn=72
 set list "Show hidden characters
 set listchars=tab:▸\ ,extends:❯,precedes:❮ "Substite hidden characters
 set clipboard+=unnamed "Include desktop clipboard for pasting from outside vim
