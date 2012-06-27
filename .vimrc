@@ -16,7 +16,7 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/L9'
-Bundle 'vim-scripts/jellybeans'
+Bundle 'vim-scripts/jellybeans.vim'
 Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
