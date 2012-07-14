@@ -128,3 +128,6 @@ alias ga="git add"
 alias gc="git commit"
 alias gd="git diff --color-words"
 alias gl="git l"
+
+alias tw="twilist.py add"
+alias twilist="twilist.py"
