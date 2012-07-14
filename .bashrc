@@ -131,3 +131,4 @@ alias gl="git l"
 
 alias tw="twilist.py add"
 alias twilist="twilist.py"
+alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
