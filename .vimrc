@@ -210,3 +210,4 @@ nnoremap <silent><leader>f :CtrlP<cr>
 "vim-fugitive shortcuts
 nnoremap <silent><leader>gc :Gcommit<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
+nnoremap <silent><leader>ga :Gwrite<cr>:Gcommit<cr>
