@@ -101,6 +101,8 @@ set background=dark
 colorscheme jellybeans
 hi Normal ctermbg=None
 hi ColorColumn ctermbg=green
+hi TabLineSel ctermbg=red ctermfg=white
+hi TabLine ctermbg=None ctermfg=white
 
 let mapleader ="," "Leader key
 
