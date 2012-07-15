@@ -18,6 +18,7 @@ Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/jellybeans.vim'
 Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
+Bundle 'tpope/vim-fugitive'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 
 " Core toggles for vim in order to support other customized stuff
@@ -76,7 +77,7 @@ set textwidth=72 "Wrap (or autobreak if possible, usually on comments) at column
 set colorcolumn=72
 set list "Show hidden characters
 set listchars=tab:▸\ ,extends:❯,precedes:❮ "Substite hidden characters
-set clipboard+=unnamed "Include desktop clipboard for pasting from outside vim
+set clipboard=unnamed "Include desktop clipboard for pasting from outside vim
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions+=LlRrb "remove right-hand scroll bar
@@ -99,7 +100,6 @@ set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 set background=dark
 colorscheme jellybeans
 hi Normal ctermbg=None
-hi TabLineSel ctermfg=Magenta ctermbg=White
 
 let mapleader ="," "Leader key
 
