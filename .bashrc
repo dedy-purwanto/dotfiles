@@ -130,5 +130,5 @@ alias gd="git diff --color-words"
 alias gl="git l"
 
 alias tw="twilist.py --file '$HOME/Ubuntu One/twilist_data/twilist' add"
-alias twi="twilist.py --file '$HOME/Ubuntu One/twilist_data/twilist'"
+alias twlist="twilist.py --file '$HOME/Ubuntu One/twilist_data/twilist' list"
 alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
