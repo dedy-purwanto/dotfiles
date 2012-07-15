@@ -206,3 +206,7 @@ let g:ctrlp_prompt_mappings = {
 \}
 nnoremap <silent><leader>f :CtrlP<cr>
 
+
+"vim-fugitive shortcuts
+nnoremap <silent><leader>gc :Gcommit<cr>
+nnoremap <silent><leader>gs :Gstatus<cr>
