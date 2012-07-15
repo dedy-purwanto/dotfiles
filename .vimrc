@@ -100,6 +100,7 @@ set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 set background=dark
 colorscheme jellybeans
 hi Normal ctermbg=None
+hi ColorColumn ctermbg=green
 
 let mapleader ="," "Leader key
 
