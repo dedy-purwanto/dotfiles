@@ -133,3 +133,6 @@ alias tw="twilist --file '$HOME/Ubuntu One/twilist_data/twilist'"
 alias ta="tw add"
 alias tl="tw list"
 alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
+
+# Hide pyc files on ls
+alias ls="ls --hide='*.pyc'"
