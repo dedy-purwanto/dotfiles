@@ -100,10 +100,10 @@ set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 "Theme
 set background=dark
 colorscheme hybrid
-hi Normal ctermbg=None
+"hi Normal ctermbg=None
 "hi ColorColumn ctermbg=green
-hi TabLineSel ctermbg=red ctermfg=white
-hi TabLine ctermbg=None ctermfg=white
+"hi TabLineSel ctermbg=red ctermfg=white
+"hi TabLine ctermbg=None ctermfg=white
 
 let mapleader ="," "Leader key
 
