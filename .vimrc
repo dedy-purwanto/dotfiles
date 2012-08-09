@@ -20,6 +20,7 @@ Bundle 'vim-scripts/jellybeans.vim'
 Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'tpope/vim-fugitive'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+Bundle 'git://github.com/w0ng/vim-hybrid.git'
 
 " Core toggles for vim in order to support other customized stuff
 set nocompatible "No compatibility with vi
@@ -98,7 +99,7 @@ set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 
 "Theme
 set background=dark
-colorscheme jellybeans
+colorscheme hybrid
 hi Normal ctermbg=None
 hi ColorColumn ctermbg=green
 hi TabLineSel ctermbg=red ctermfg=white
