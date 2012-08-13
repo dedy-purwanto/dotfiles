@@ -208,7 +208,15 @@ let g:ctrlp_prompt_mappings = {
             \'AcceptSelection("e")' : ['<c-t>'],
             \'AcceptSelection("t")' : ['<cr>'],
 \}
-nnoremap <silent><leader>f :CtrlP<cr>
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
+"let g:ctrlp_user_command = ['.hg', 'hg --cwd %s locate -I .']
+let g:ctrlp_user_command = {
+    \ 'types': {
+        \ 1: ['.hg', 'hg --cwd %s locate -I . -f'],
+        \ },
+    \ 'fallback': 'find %s -type f'
+    \ }
+nnoremap <silent><leader>f :CtrlPMixed<cr>
 
 
 "vim-fugitive shortcuts
