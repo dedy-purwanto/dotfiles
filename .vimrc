@@ -104,6 +104,7 @@ colorscheme hybrid
 "hi ColorColumn ctermbg=green
 "hi TabLineSel ctermbg=red ctermfg=white
 "hi TabLine ctermbg=None ctermfg=white
+hi MatchParen ctermbg=blue
 
 let mapleader ="," "Leader key
 
