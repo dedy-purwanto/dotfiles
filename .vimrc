@@ -193,6 +193,7 @@ nnoremap <S-K> <ESC>
 nnoremap <silent><leader>j :FufRenewCache<CR>:FufFile<CR>
 nnoremap <silent><leader>b :FufBuffer<CR>
 let g:fuf_file_exclude = 'v\~$|\.pyc$|\.orig$|\.bak$|\.swp$|\.swo$'
+let g:fuf_keyOpenTabpage = '<CR>'
 
 "Nerdtree configs
 nnoremap <silent><F2> :NERDTreeToggle<cr>
