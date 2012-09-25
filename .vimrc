@@ -102,6 +102,7 @@ set background=dark
 colorscheme hybrid
 "hi Normal ctermbg=None
 "hi ColorColumn ctermbg=green
+hi CursorLine ctermbg=8
 "hi TabLineSel ctermbg=red ctermfg=white
 "hi TabLine ctermbg=None ctermfg=white
 hi MatchParen ctermbg=blue
