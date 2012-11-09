@@ -1,4 +1,5 @@
-URxvt.font: xft:Terminus:bold:pixelsize=12
+URxvt.font: xft:Terminus:regular:pixelsize=12
+URxvt.boldFont: xft:Terminus:regular:pixelsize=12
 URxvt*termName:screen-256color
 !URxvt.tabbed.tabbar-fg: 7
 !URxvt.tabbed.tabbar-bg: 0
@@ -32,7 +33,7 @@ URxvt.internalBorder:       0
 URxvt.lineSpace:            0
 
 ! Fonts
-URxvt.allow_bold:           true
+URxvt.allow_bold:           false
 
 ! Fix font space
 URxvt*letterSpace: 0
