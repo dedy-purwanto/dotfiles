@@ -41,4 +41,9 @@ alias ga="git add"
 alias gc="git commit"
 alias gd="git diff --color-words"
 alias gl="git l"
-# Customize to your needs...
+
+# Auto reload Xresources whenever urxvt is launched from shell
+alias urxvt="xrdb -load ~/.Xresources && urxvt"
+
+# ack alias
+alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
