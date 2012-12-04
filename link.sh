@@ -6,6 +6,7 @@ ln -f .gitconfig ~/
 ln -f .hgrc ~/
 ln -f .Xmodmap ~/
 ln -f .Xresources ~/
+ln -f .zshrc ~/
 
 ln -f ls-colors-solarized/dircolors ~/.dircolors
 ln -f urxvt-tabbedex/tabbedex ~/.urxvt/
