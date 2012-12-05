@@ -29,6 +29,11 @@ ZSH_THEME="bira"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
+#
+
+eval `dircolors ~/.dotfiles/ls-colors-solarized/dircolors`
+
+
 plugins=(git mercurial nyan)
 
 source $ZSH/oh-my-zsh.sh
@@ -47,3 +52,5 @@ alias urxvt="xrdb -load ~/.Xresources && urxvt"
 
 # ack alias
 alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
+
+alias pip="pip --timeout=280"
