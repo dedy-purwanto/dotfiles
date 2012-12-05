@@ -6,7 +6,6 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="bira"
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -54,3 +53,4 @@ alias urxvt="xrdb -load ~/.Xresources && urxvt"
 alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
 
 alias pip="pip --timeout=280"
+alias rmswap="find /var/tmp -name '*.swp' | xargs -i rm {}"
