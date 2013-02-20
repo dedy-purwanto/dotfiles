@@ -5,7 +5,7 @@ editor = vim
 
 [extensions]
 color =
-histedit = ~/.hg/extensions/histedit/hg_histedit.py
+#histedit = ~/.hg/extensions/histedit/hg_histedit.py
 
 [color]
 mode = auto

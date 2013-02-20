@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="bira"
+ZSH_THEME="agnoster"
+DEFAULT_USER="kecebongsoft"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -36,7 +37,7 @@ eval `dircolors ~/.dotfiles/ls-colors-solarized/dircolors`
 plugins=(git mercurial nyan)
 
 source $ZSH/oh-my-zsh.sh
-export TERM="xterm-256color"
+export TERM="screen-256color"
 alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
 alias google="google --editor=vim"
 
@@ -54,3 +55,15 @@ alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
 
 alias pip="pip --timeout=280"
 alias rmswap="find /var/tmp -name '*.swp' | xargs -i rm {}"
+
+export WORKON_HOME=$HOME/.envs/
+export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.envs/
+source /usr/local/bin/virtualenvwrapper.sh
+
+function precmd() {
+    env_name=$(basename "$VIRTUAL_ENV")
+    if [[ $env_name != "" ]]; then
+        PS1="$_OLD_VIRTUAL_PS1"
+        _OLD_RPROMPT="$RPROMPT"
+    fi
+}

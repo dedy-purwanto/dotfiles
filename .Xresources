@@ -1,5 +1,5 @@
-URxvt.font: xft:Ubuntu\ Mono:bold:pixelsize=12
-URxvt.boldFont: xft:Ubuntu\ Mono:bold:pixelsize=12
+URxvt.font: xft:Ubuntu\ Mono\ for\ Powerline:bold:pixelsize=12
+URxvt.boldFont: xft:Ubuntu\ Mono\ for\ Powerline:bold:pixelsize=12
 URxvt*termName:screen-256color
 !URxvt.tabbed.tabbar-fg: 7
 !URxvt.tabbed.tabbar-bg: 0
@@ -109,7 +109,7 @@ URxvt.pointerBlank:         true
 *pointerColorForeground: #93a1a1
 
 !! black dark/light
-*color0: #073642
+*color0: #002B36
 *color8: #002b36
 
 !! red dark/light
