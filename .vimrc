@@ -21,6 +21,8 @@ Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
 Bundle 'tpope/vim-fugitive'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 Bundle 'git://github.com/w0ng/vim-hybrid.git'
+Bundle 'git://github.com/flazz/vim-colorschemes.git'
+Bundle 'git://github.com/Shougo/neocomplcache.vim.git'
 
 " Core toggles for vim in order to support other customized stuff
 set nocompatible "No compatibility with vi
@@ -49,7 +51,7 @@ set cursorline "Highlight current line
 set ruler "Set ruler for margin
 set laststatus=2 "Always show status line (bottom of the screen)
 set undofile "Load undo file for the edited files when available, so we can undo things even if the file is just opened
-set rnu "Show relative line numbering based on the current line
+set number "Show relative line numbering based on the current line
 set history=1000 "Maximum history
 set undoreload=10000 "Maximum number of undo loaded
 set smartcase "Smart case for search, replace, etc
@@ -99,14 +101,15 @@ set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 
 "Theme
 set background=dark
-colorscheme solarized
+colorscheme smyck
 "hi Normal ctermbg=None
-"hi ColorColumn ctermbg=green
-hi CursorLine ctermbg=8
-"hi TabLineSel ctermbg=DarkRed ctermfg=white
-"hi TabLine ctermbg=White ctermfg=Black
-"hi TabLineFill ctermbg=White ctermfg=Black
-hi MatchParen ctermbg=blue
+hi ColorColumn ctermbg=None
+"hi CursorLine ctermbg=0
+hi TabLineSel ctermbg=4 ctermfg=white
+hi TabLine                   cterm=none ctermbg=none     ctermfg=4      gui=none        guibg=#282828   guifg=#F7F7F7
+hi TabLineFill               cterm=none ctermbg=none     ctermfg=0      gui=none        guibg=#282828   guifg=#F7F7F7
+hi MatchParen ctermbg=2
+
 
 let mapleader ="," "Leader key
 
@@ -227,3 +230,15 @@ nnoremap <silent><leader>f :CtrlPMixed<cr>
 nnoremap <silent><leader>gc :Gcommit<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
 nnoremap <silent><leader>ga :Gwrite<cr>:Gcommit<cr>
+
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_auto_select = 0
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+
+
+set nocursorline        " Don't paint cursor line
+set nocursorcolumn      " Don't paint cursor column
+set lazyredraw          " Wait to redraw
+set scrolljump=8        " Scroll 8 lines at a time at bottom/top
+let html_no_rendering=1 " Don't render italic, bold, links in HTML
