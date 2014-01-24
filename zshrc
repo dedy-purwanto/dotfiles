@@ -54,7 +54,7 @@ alias urxvt="xrdb -load ~/.Xresources && urxvt"
 #alias ack="ack-grep --color --color-filename=Blue --color-match=Red"
 
 alias pip="pip --timeout=280"
-alias rmswap="find /var/tmp -name '*.swp' | xargs rm {}"
+alias rmswap="sudo find /var/tmp -name '*.swp' | xargs sudo rm {}"
 
 export WORKON_HOME=$HOME/.envs/
 export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.envs/
@@ -70,6 +70,7 @@ function precmd() {
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/lib/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/bin/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/include/
+export C_INCLUDE_PATH=/Applications/Postgres.app/Contents/MacOS/include/
 export DYLD_LIBRARY_PATH="/Library/Postgres.app/Contents/MacOS/include/:$DYLD_LIBRARY_PATH"
 
 alias check='git checkout'
