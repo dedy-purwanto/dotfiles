@@ -23,6 +23,9 @@ Bundle 'git://github.com/Lokaltog/vim-powerline.git'
 Bundle 'git://github.com/w0ng/vim-hybrid.git'
 Bundle 'git://github.com/flazz/vim-colorschemes.git'
 Bundle 'git://github.com/Shougo/neocomplcache.vim.git'
+Bundle 'git://github.com/michaeljsmith/vim-indent-object.git'
+"Bundle 'git://github.com/Valloric/YouCompleteMe.git'
+
 
 " Core toggles for vim in order to support other customized stuff
 set nocompatible "No compatibility with vi
@@ -101,10 +104,13 @@ set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
 
 "Theme
 set background=dark
-colorscheme smyck
+colorscheme base16-bright
 "hi Normal ctermbg=None
 hi ColorColumn ctermbg=None
-"hi CursorLine ctermbg=0
+hi CursorLine ctermbg=52
+hi LineNr ctermbg=0 ctermfg=10
+
+
 hi TabLineSel ctermbg=4 ctermfg=white
 hi TabLine                   cterm=none ctermbg=none     ctermfg=4      gui=none        guibg=#282828   guifg=#F7F7F7
 hi TabLineFill               cterm=none ctermbg=none     ctermfg=0      gui=none        guibg=#282828   guifg=#F7F7F7
@@ -117,8 +123,8 @@ let mapleader ="," "Leader key
 nnoremap <tab> %
 
 "Remap semicolon to fullcolon so we don't have to press shift-;
-nnoremap ; :
-vnoremap ; :
+"nnoremap ; :
+"vnoremap ; :
 
 "Remove arrow keys binding and replace to hjkl
 nnoremap <up> <nop>
@@ -199,6 +205,7 @@ nnoremap <silent><leader>j :FufRenewCache<CR>:FufFile<CR>
 nnoremap <silent><leader>b :FufBuffer<CR>
 let g:fuf_file_exclude = 'v\~$|\.pyc$|\.orig$|\.bak$|\.swp$|\.swo$'
 let g:fuf_keyOpenTabpage = '<CR>'
+let g:fuf_keyOpenSplit = '<C-i>'
 
 "Nerdtree configs
 nnoremap <silent><F2> :NERDTreeToggle<cr>
@@ -217,19 +224,23 @@ let g:ctrlp_prompt_mappings = {
 \}
 "let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
 "let g:ctrlp_user_command = ['.hg', 'hg --cwd %s locate -I .']
-let g:ctrlp_user_command = {
-    \ 'types': {
-        \ 1: ['.hg', 'hg --cwd %s locate -I . -f'],
-        \ },
-    \ 'fallback': 'find %s -type f'
-    \ }
-nnoremap <silent><leader>f :CtrlPMixed<cr>
+"let g:ctrlp_user_command = {
+    "\ 'types': {
+        "\ 1: ['.hg', 'hg --cwd %s locate -I . -f'],
+        "\ },
+    "\ 'fallback': 'find %s -type f'
+    "\ }
+"nnoremap <silent><leader>f :CtrlPMixed<cr>
 
 
 "vim-fugitive shortcuts
 nnoremap <silent><leader>gc :Gcommit<cr>
 nnoremap <silent><leader>gs :Gstatus<cr>
 nnoremap <silent><leader>ga :Gwrite<cr>:Gcommit<cr>
+nnoremap <silent><leader>p :set paste<cr>p:set nopaste<cr>
+
+"Run the current buffer as python script
+nnoremap <silent><leader>r :w !python<cr>
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 0
@@ -237,8 +248,8 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
 
 
-set nocursorline        " Don't paint cursor line
-set nocursorcolumn      " Don't paint cursor column
+"set nocursorline        " Don't paint cursor line
+"set nocursorcolumn      " Don't paint cursor column
 set lazyredraw          " Wait to redraw
 set scrolljump=8        " Scroll 8 lines at a time at bottom/top
-let html_no_rendering=1 " Don't render italic, bold, links in HTML
+"let html_no_rendering=1 " Don't render italic, bold, links in HTML

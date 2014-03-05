@@ -1,4 +1,5 @@
 # Path to your oh-my-zsh configuration.
+[ -z "$PS1" ] && return
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
@@ -83,3 +84,6 @@ alias pg_config='/Applications/Postgres.app/Contents/MacOS/bin/pg_config'
 alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
 alias gettext=/usr/local/Cellar/gettext/0.18.3.1/bin/gettext
 PATH=/usr/local/Cellar/gettext/0.18.3.1/bin:$PATH
+
+alias pyclear="find . -name '*.pyc' | xargs rm"
+alias gitclear="find . -name '*.orig' | xargs rm"
