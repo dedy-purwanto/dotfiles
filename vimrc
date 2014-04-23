@@ -1,42 +1,26 @@
 " Must install vundle before installing all of these plugins
-
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'snipmate-snippets'
-Bundle 'garbas/vim-snipmate'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'vim-scripts/L9'
-Bundle 'vim-scripts/jellybeans.vim'
-Bundle 'vim-scripts/Puppet-Syntax-Highlighting'
-Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim' 
+Bundle 'scrooloose/nerdcommenter' 
+Bundle 'kevinw/pyflakes-vim' 
+Bundle 'chriskempson/base16-vim' 
+Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'git://github.com/tpope/vim-abolish.git'
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
-Bundle 'git://github.com/w0ng/vim-hybrid.git'
-Bundle 'git://github.com/flazz/vim-colorschemes.git'
+Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
+Bundle 'git://github.com/airblade/vim-gitgutter.git'
 Bundle 'git://github.com/Shougo/neocomplcache.vim.git'
-Bundle 'git://github.com/michaeljsmith/vim-indent-object.git'
-"Bundle 'git://github.com/Valloric/YouCompleteMe.git'
 
-
-" Core toggles for vim in order to support other customized stuff
-set nocompatible "No compatibility with vi
 set nomore "Disable messages
 set ttyfast "Improve rendering
 set shell=/bin/bash "Default shell
 set modelines=0
 set encoding=utf-8
 filetype plugin indent on
-
-" Customized toggles
 syntax enable "Enable syntax highlighting
 set shellcmdflag=-ic "Vim shell will also use ~/.bashrc configuration
 set tabstop=4
@@ -54,6 +38,7 @@ set cursorline "Highlight current line
 set ruler "Set ruler for margin
 set laststatus=2 "Always show status line (bottom of the screen)
 set undofile "Load undo file for the edited files when available, so we can undo things even if the file is just opened
+set linespace=2
 set number "Show relative line numbering based on the current line
 set history=1000 "Maximum history
 set undoreload=10000 "Maximum number of undo loaded
@@ -101,30 +86,20 @@ set wildignore+=*.class " java sstuff
 set backupskip=/tmp/*,/private/tmp/*" "Skip backup in these dirs
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,. "Set swap dir
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,."Set undo dir
+set lazyredraw
+set scrolljump=8        " Scroll 8 lines at a time at bottom/top
 
 "Theme
 set background=dark
-colorscheme base16-bright
-"hi Normal ctermbg=None
-hi ColorColumn ctermbg=None
-hi CursorLine ctermbg=52
-hi LineNr ctermbg=0 ctermfg=10
+set guifont=Droid\ Sans\ Mono:h13
+colorscheme base16-ocean
 
-
-hi TabLineSel ctermbg=4 ctermfg=white
-hi TabLine                   cterm=none ctermbg=none     ctermfg=4      gui=none        guibg=#282828   guifg=#F7F7F7
-hi TabLineFill               cterm=none ctermbg=none     ctermfg=0      gui=none        guibg=#282828   guifg=#F7F7F7
-hi MatchParen ctermbg=2
-
-
+" Key mappings
+" ==============
 let mapleader ="," "Leader key
 
 "Tab on normal will move to the next matching bracket
-nnoremap <tab> %
-
-"Remap semicolon to fullcolon so we don't have to press shift-;
-"nnoremap ; :
-"vnoremap ; :
+nnoremap <tab> % 
 
 "Remove arrow keys binding and replace to hjkl
 nnoremap <up> <nop>
@@ -143,7 +118,7 @@ nnoremap p ]p
 nnoremap P ]P
 
 "Insert blank line above/below cursors
-nnoremap zj :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap zj :set paste<CR>m`o<Esc>``:set nopaste<CR> 
 nnoremap zk :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 "Line/Block indenting in visual mode using <tab> and <s-tab>
@@ -153,14 +128,14 @@ vnoremap <silent><TAB> >gv
 "Remove whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-"Search shortcut for smartcase
+"Search shortcut for smartcase 
 nnoremap / /\v
 vnoremap / /\v
 
 "Clear highlighted match
 nnoremap <silent><leader><space> :noh<cr>
 
-"Search mappings: These will make it so that going to the next one in a search will center on the line it's found in.
+"Search mappings: Highlight next/prev result
 map N Nzz
 map n nzz
 
@@ -171,14 +146,14 @@ inoremap jk <ESC>
 cmap w!! %!sudo tee > /dev/null %
 
 "Move current tab to left/right with C-j and C-k, swith to next/prev tab with C-h and C-l
-inoremap <silent><C-j> <ESC>:execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
-inoremap <silent><C-k> <ESC>:execute 'silent! tabmove ' . tabpagenr()<cr>
-inoremap <silent><C-l> <ESC>:tabnext<cr>
-inoremap <silent><C-h> <ESC>:tabprevious<cr>
-nnoremap <silent><C-j> :execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
-nnoremap <silent><C-k> :execute 'silent! tabmove ' . tabpagenr()<cr>
-nnoremap <silent><C-l> :tabnext<cr>
-nnoremap <silent><C-h> :tabprevious<cr>
+inoremap <silent><C-j> <ESC>:tabnext<cr>
+inoremap <silent><C-k> <ESC>:tabprevious<cr>
+nnoremap <silent><C-j> :tabnext<cr>
+nnoremap <silent><C-k> :tabprevious<cr>
+inoremap <silent><C-h> <ESC>:bprevious<cr>
+nnoremap <silent><C-h> :bprevious<cr>
+inoremap <silent><C-l> <ESC>:bnext<cr>
+nnoremap <silent><C-l> :bnext<cr>
 
 "Increase number with ctrl-a conflict with tmux mapping
 nnoremap <C-A-a> <C-a>
@@ -186,9 +161,6 @@ nnoremap <C-A-a> <C-a>
 "Fast edit and reload vimrc
 nnoremap <leader>ev :tabnew ~/.vimrc<cr>
 nnoremap <leader>er :source ~/.vimrc<cr>
-
-" Resize splits when the window is resized
-au VimResized * exe "normal! \<c-w>="
 
 " Disable man page shortcut, I always accidentally press S-K and things wiped
 " out
@@ -198,72 +170,16 @@ nnoremap <S-K> <ESC>
 "-----------------------------------------------------------------
 "Plugin Configurations
 "-----------------------------------------------------------------
+nnoremap <silent><leader>g :Gstatus<cr>
 
-"vim-fuf shortcuts
-"Auto renew and open
-nnoremap <silent><leader>j :FufRenewCache<CR>:FufFile<CR>
-nnoremap <silent><leader>b :FufBuffer<CR>
-let g:fuf_file_exclude = 'v\~$|\.pyc$|\.orig$|\.bak$|\.swp$|\.swo$'
-let g:fuf_keyOpenTabpage = '<CR>'
-let g:fuf_keyOpenSplit = '<C-i>'
-
-"Nerdtree configs
-nnoremap <silent><F2> :NERDTreeToggle<cr>
-inoremap <silent><F2> <ESC>:NERDTreeToggle<cr>
-vnoremap <silent><F2> <ESC>:NERDTreeToggle<cr>
-let NERDTreeIgnore = ['\.pyc$', '\.pyo$', '\.swp$', '\~$']
-
-"Yankring shortcuts
-nnoremap <silent> <F3> :YRShow<cr>
-inoremap <silent> <F3> <ESC>:YRShow<cr>
-
-"CtrlP default open on new tab, reverse it with the default mapping
-let g:ctrlp_prompt_mappings = {
-            \'AcceptSelection("e")' : ['<c-t>'],
-            \'AcceptSelection("t")' : ['<cr>'],
-\}
-"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files']
-"let g:ctrlp_user_command = ['.hg', 'hg --cwd %s locate -I .']
-"let g:ctrlp_user_command = {
-    "\ 'types': {
-        "\ 1: ['.hg', 'hg --cwd %s locate -I . -f'],
-        "\ },
-    "\ 'fallback': 'find %s -type f'
-    "\ }
-"nnoremap <silent><leader>f :CtrlPMixed<cr>
-
-
-"vim-fugitive shortcuts
-nnoremap <silent><leader>gc :Gcommit<cr>
-nnoremap <silent><leader>gs :Gstatus<cr>
-nnoremap <silent><leader>ga :Gwrite<cr>:Gcommit<cr>
-nnoremap <silent><leader>p :set paste<cr>p:set nopaste<cr>
+nnoremap <silent><C-b> :CtrlPBuffer<cr>
+inoremap <silent><C-b> <ESC>:CtrlPBuffer<cr>
 
 "Run the current buffer as python script
 nnoremap <silent><leader>r :w !python<cr>
+nnoremap <silent><leader>t :w !bash<cr>
 
 let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 0
+let g:neocomplcache_enable_auto_select = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_camel_case_completion = 1
-
-
-"set nocursorline        " Don't paint cursor line
-"set nocursorcolumn      " Don't paint cursor column
-set lazyredraw          " Wait to redraw
-set scrolljump=8        " Scroll 8 lines at a time at bottom/top
-"let html_no_rendering=1 " Don't render italic, bold, links in HTML
-
-
-function s:MkNonExDir(file, buf)
-    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-        let dir=fnamemodify(a:file, ':h')
-        if !isdirectory(dir)
-            call mkdir(dir, 'p')
-        endif
-    endif
-endfunction
-augroup BWCCreateDir
-    autocmd!
-    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
-augroup END
