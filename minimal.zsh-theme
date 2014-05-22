@@ -23,4 +23,5 @@ env_status() {
 
 }
 
-PROMPT='%2~ $(vcs_status)$(env_status)»%b '
+PROMPT='%2~ $(vcs_status)$(env_status)
+»%b '
