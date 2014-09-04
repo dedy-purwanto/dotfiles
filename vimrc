@@ -4,104 +4,119 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/L9'
-Bundle 'kevinw/pyflakes-vim' 
-Bundle 'chriskempson/base16-vim' 
-Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'kevinw/pyflakes-vim'
+" Color scheme
+Bundle 'chriskempson/base16-vim'
+Bundle 'git://github.com/endel/vim-github-colorscheme'
+" Git integration
 Bundle 'git://github.com/tpope/vim-fugitive.git'
+" String substitute for plural / singular (context sensitive)
 Bundle 'git://github.com/tpope/vim-abolish.git'
+" Language-agnostic commenting plugin
 Bundle 'git://github.com/tpope/vim-commentary.git'
+" Should I say more?
 Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+" Awesome jumping to text
 Bundle 'git://github.com/Lokaltog/vim-easymotion.git'
+" Showing git diff
 Bundle 'git://github.com/airblade/vim-gitgutter.git'
-Bundle 'git://github.com/Shougo/neocomplcache.vim.git'
-Bundle 'git://github.com/terryma/vim-multiple-cursors.git'
-Bundle 'git://github.com/terryma/vim-expand-region.git'
-Bundle 'git://github.com/kecebongsoft/vim-github-colorscheme.git'
+" Send command from vim to iTerm2
+Bundle 'git://github.com/matschaffer/vim-islime2.git'
+" Python tag list
+Bundle 'git://github.com/majutsushi/tagbar'
+" Awesome HAML to HTML by CTRL-E on HTML files
+Bundle 'git://github.com/rstacruz/sparkup'
+" Auto close scope (brackets, quotes, etc)
+Bundle 'git://github.com/Raimondi/delimitMate'
+" Awesome completion
+Bundle 'git://github.com/Valloric/YouCompleteMe'
+" Snippet engine and snipet lists
+Bundle 'git://github.com/honza/vim-snippets'
+Bundle 'git://github.com/SirVer/ultisnips'
+" Unite, async and tags support
+Bundle 'git://github.com/Shougo/unite.vim'
+Bundle 'git://github.com/Shougo/vimproc.vim'
+Bundle 'git://github.com/Shougo/neomru.vim'
+Bundle 'git://github.com/tsukkee/unite-tag'
+" Text swap plugin
+Bundle 'git://github.com/tommcdo/vim-exchange'
+" Undo tree
+Bundle 'git://github.com/sjl/gundo.vim.git'
 
 filetype plugin indent on
-syntax enable "Enable syntax highlighting
-set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile number smartcase gdefault incsearch showmatch hlsearch lazyredraw splitright splitbelow ttimeout notimeout nottimeout autoindent shiftround autoread nobackup wrap list
-set shell=/bin/bash tabstop=4 shiftwidth=4 softtabstop=4 laststatus=2 linespace=1 scrolloff=3 history=100 undoreload=10000 scrolljump=8 matchtime=3  modelines=0 encoding=utf-8 textwidth=72 colorcolumn=80 clipboard=unnamed background=dark
-set showbreak=↪ 
+syntax enable
+set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile number smartcase gdefault incsearch showmatch hlsearch lazyredraw splitright splitbelow ttimeout notimeout nottimeout autoindent shiftround autoread nobackup wrap list hidden
+set shell=/bin/bash tabstop=4 shiftwidth=4 softtabstop=4 laststatus=2 linespace=1 scrolloff=3 history=100 undoreload=10000 scrolljump=8 matchtime=3  modelines=0 encoding=utf-8 textwidth=72 clipboard=unnamed background=light mouse=a backspace=2 completeopt-=preview
+set showbreak=↪
 set wildmode=list:longest "Show full item on the dropdown
 set fillchars=diff:\  "Show latest changed stuff in the status line when available
-set dictionary=/usr/share/dict/words "Dictionary, also used for completion
+set dictionary=/usr/share/dict/words
 set formatoptions=qrn1 "Format for pasting text
-set listchars=tab:▸\ ,extends:❯,precedes:❮ "Substite hidden characters
-set guioptions-=mT guioptions+=LlRrb guioptions-=LlRrb
+set listchars=tab:▸\ ,extends:❯,precedes:❮ 
 set wildignore+=.hg,.git,.svn,*.aux,*.out,*.toc,*.jpg,*.bmp,*.gif,*.png,*.jpeg,*.luacd,*.o,*.obj,*.exe,*.dll,*.manifest,*.pyc,*.spl,*.sw?,*.DS_Store?,*.class
-set backupskip=/tmp/*,/private/tmp/*" "Skip backup in these dirs
-set dir=~/.vim/swaps//,/var/tmp//,/tmp//,. "Set swap dir
-set undodir=~/.vim/undos//,/var/tmp//,/tmp//,. "Set undo dir
-set guifont=MonacoB2:h11
-colorscheme base16-flat
+set backupskip=/tmp/*,/private/tmp/*" 
+set dir=~/.vim/swaps//,/var/tmp//,/tmp//,. 
+set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
 
-let mapleader ="," "Leader key
+" Keymappings and shit
+let mapleader =","
 inoremap jk <ESC>
+nnoremap <C-c> <ESC>
 nnoremap j gj
 nnoremap k gk
-
 "Insert blank line above/below cursors
-nnoremap zj :set paste<CR>m`o<Esc>``:set nopaste<CR> 
+nnoremap zj :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap zk :set paste<CR>m`O<Esc>``:set nopaste<CR>
-
 "Remove whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
-
-"Clear highlighted match
+" Clear highlighted match
 nnoremap <silent><leader><space> :noh<cr>
-
-cmap w!! %!sudo tee > /dev/null %
-nnoremap <silent><leader>r :w !python<cr>
+" Run buffer as scripts
+nnoremap <silent><leader>p :w !python<cr>
 nnoremap <silent><leader>t :w !bash<cr>
-inoremap <silent><C-j> <ESC>:execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
-inoremap <silent><C-k> <ESC>:execute 'silent! tabmove ' . tabpagenr()<cr>
-inoremap <silent><C-l> <ESC>:tabnext<cr>
-inoremap <silent><C-h> <ESC>:tabprevious<cr>
-nnoremap <silent><C-j> :execute 'silent! tabmove ' . (tabpagenr()-2)<cr>
-nnoremap <silent><C-k> :execute 'silent! tabmove ' . tabpagenr()<cr>
-nnoremap <silent><C-l> :tabnext<cr>
-nnoremap <silent><C-h> :tabprevious<cr>
-
-" Paste and move cursor to the end of the line 
+" Reformat buffer as JSON
+map <leader>aj <Esc>:%!python -m json.tool<cr>
+" Paste and move cursor to the end of the line
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
 nnoremap <silent> p p`]
-
 " Visual select the just-pasted text
 noremap gV `[v`]
-
-"Fast edit and reload vimrc
-nnoremap <leader>ev :tabnew ~/.vimrc<cr>
+" Fast edit and reload vimrc
+nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>er :source ~/.vimrc<cr>
-
-" Disable man page shortcut
-nnoremap <S-k> <ESC>
-nnoremap <silent><leader>j :FufRenewCache<CR>:FufFile<CR>
-nnoremap <silent><leader>b :FufBuffer<CR>
-let g:fuf_file_exclude = 'v\~$|\.pyc$|\.orig$|\.bak$|\.swp$|\.swo$'
-let g:fuf_keyOpenTabpage = '<CR>'
-let g:fuf_keyOpenSplit = '<C-i>'
+" Save as sudoers
+cmap w!! %!sudo tee > /dev/null %
+nnoremap <S-k> <ESC> " Disable man page shortcut
 nnoremap <silent><leader>g :Gstatus<cr>
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_auto_select = 1
-let g:neocomplcache_enable_smart_case = 1
-let g:neocomplcache_enable_camel_case_completion = 1
 
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
+" PLUGIN CONFIGURATIONS
+" -------------------------
+let g:tname = ''
+nnoremap <leader>we :execute "ISlime2 ./manage.py test " . tname<cr>
+nnoremap <leader>z :TagbarToggle<cr>
+nnoremap <silent><leader>u  :GundoToggle<cr>
 
-function s:MkNonExDir(file, buf)
-    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
-        let dir=fnamemodify(a:file, ':h')
-        if !isdirectory(dir)
-            call mkdir(dir, 'p')
-        endif
-    endif
+let g:UltiSnipsExpandTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+let g:ycm_key_list_previous_completion = ['<Up>'] " Remove S-Tab from this list for UltiSips
+nnoremap <leader>d :YcmCompleter GoToDeclaration<cr>
+
+" Unite configuration
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+    imap <buffer> <C-h>   <Plug>(unite_delete_backward_path)
 endfunction
-augroup BWCCreateDir
-    autocmd!
-    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
-augroup END
-
-
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy', 'matcher_hide_hidden_files', 'sorter_rank'])
+nnoremap [unite] <Nop>
+nmap <space> [unite]
+nnoremap [unite]a :Unite -start-insert file<cr>
+nnoremap [unite]e :Unite -start-insert file_rec/async<cr>
+nnoremap [unite]s :Unite -start-insert tag<cr>
+nnoremap [unite]f :Unite grep:.<cr>
+nnoremap [unite]q :Unite -quick-match history/yank<cr>
+nnoremap [unite]c :Unite -quick-match file_mru<cr>
+nnoremap [unite]d :Unite -quick-match buffer<cr>

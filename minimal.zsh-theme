@@ -1,7 +1,7 @@
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}[%{$fg[blue]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$reset_color%}%{$fg[blue]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}●%{$reset_color%}%{$reset_color%}] "
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%}] "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%}●%{$reset_color%}%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%} "
 ZSH_THEME_SVN_PROMPT_PREFIX=$ZSH_THEME_GIT_PROMPT_PREFIX
 ZSH_THEME_SVN_PROMPT_SUFFIX=$ZSH_THEME_GIT_PROMPT_SUFFIX
 ZSH_THEME_SVN_PROMPT_DIRTY=$ZSH_THEME_GIT_PROMPT_DIRTY
@@ -18,7 +18,7 @@ vcs_status() {
 env_status() {
     ENV_NAME=$(basename "$VIRTUAL_ENV")
     if [[ $ENV_NAME != "" ]]; then
-        echo "%{$reset_color%}(%{$fg[yellow]%}$ENV_NAME%{$reset_color%}) "
+        echo "%{$reset_color%}%{$fg[yellow]%}$ENV_NAME%{$reset_color%} "
     fi
 
 }
