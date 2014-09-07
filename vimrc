@@ -4,7 +4,6 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/L9'
-Bundle 'kevinw/pyflakes-vim'
 " Color scheme
 Bundle 'chriskempson/base16-vim'
 Bundle 'git://github.com/endel/vim-github-colorscheme'
@@ -42,6 +41,8 @@ Bundle 'git://github.com/tsukkee/unite-tag'
 Bundle 'git://github.com/tommcdo/vim-exchange'
 " Undo tree
 Bundle 'git://github.com/sjl/gundo.vim.git'
+" Highlight matching HTML tags
+Bundle 'git://github.com/Valloric/MatchTagAlways'
 
 filetype plugin indent on
 syntax enable
@@ -52,7 +53,7 @@ set wildmode=list:longest "Show full item on the dropdown
 set fillchars=diff:\  "Show latest changed stuff in the status line when available
 set dictionary=/usr/share/dict/words
 set formatoptions=qrn1 "Format for pasting text
-set listchars=tab:▸\ ,extends:❯,precedes:❮ 
+set listchars=tab:┊\ 
 set wildignore+=.hg,.git,.svn,*.aux,*.out,*.toc,*.jpg,*.bmp,*.gif,*.png,*.jpeg,*.luacd,*.o,*.obj,*.exe,*.dll,*.manifest,*.pyc,*.spl,*.sw?,*.DS_Store?,*.class
 set backupskip=/tmp/*,/private/tmp/*" 
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,. 
@@ -64,6 +65,8 @@ inoremap jk <ESC>
 nnoremap <C-c> <ESC>
 nnoremap j gj
 nnoremap k gk
+" Very magic mode search
+nnoremap / /\v
 "Insert blank line above/below cursors
 nnoremap zj :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap zk :set paste<CR>m`O<Esc>``:set nopaste<CR>
@@ -96,11 +99,9 @@ let g:tname = ''
 nnoremap <leader>we :execute "ISlime2 ./manage.py test " . tname<cr>
 nnoremap <leader>z :TagbarToggle<cr>
 nnoremap <silent><leader>u  :GundoToggle<cr>
-
 let g:UltiSnipsExpandTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 let g:ycm_key_list_previous_completion = ['<Up>'] " Remove S-Tab from this list for UltiSips
 nnoremap <leader>d :YcmCompleter GoToDeclaration<cr>
 
@@ -117,6 +118,6 @@ nnoremap [unite]a :Unite -start-insert file<cr>
 nnoremap [unite]e :Unite -start-insert file_rec/async<cr>
 nnoremap [unite]s :Unite -start-insert tag<cr>
 nnoremap [unite]f :Unite grep:.<cr>
-nnoremap [unite]q :Unite -quick-match history/yank<cr>
+nnoremap [unite]q :Unite history/yank<cr>
 nnoremap [unite]c :Unite -quick-match file_mru<cr>
 nnoremap [unite]d :Unite -quick-match buffer<cr>

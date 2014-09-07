@@ -42,9 +42,12 @@ export PATH=$PATH:/Users/kecebongsoft/workspaces/opengrads/Contents/
 export PATH=$PATH:/Users/kecebongsoft/Documents/adt-bundle-mac-x86_64-20140702/sdk/tools/
 export PATH=$PATH:/Users/kecebongsoft/Documents/adt-bundle-mac-x86_64-20140702/sdk/platforms/
 export PATH=$PATH:/Users/kecebongsoft/Documents/apache-ant-1.9.4/bin/
+export PATH=$PATH:/usr/local/mysql-5.6.20-osx10.7-x86_64/lib/
 export JAVA_HOME=$(/usr/libexec/java_home)
-export C_INCLUDE_PATH=/Applications/Postgres.app/Contents/MacOS/include/
+export C_INCLUDE_PATH=C_INCLUDE_PATH:/Applications/Postgres.app/Contents/MacOS/include/
+export C_INCLUDE_PATH=C_INCLUDE_PATH:/usr/local/mysql-5.6.20-osx10.7-x86_64/include/
 export DYLD_LIBRARY_PATH="/Library/Postgres.app/Contents/MacOS/include/:$DYLD_LIBRARY_PATH"
+export DYLD_LIBRARY_PATH="/usr/local/mysql-5.6.20-osx10.7-x86_64/lib/:$DYLD_LIBRARY_PATH"
 export CFLAGS=-Qunused-arguments
 export CPPFLAGS=-Qunused-arguments
 
@@ -72,3 +75,5 @@ function gentag() {
     sed -i '' '/tests\//d' ~/.tags/$1
 }
 alias gt=gentag
+
+source ~/.host_alias
