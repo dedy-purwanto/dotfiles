@@ -1,0 +1,8 @@
+[extensions]
+shelve=
+mq=
+flow=/Users/kecebongsoft/.hgext/hgflow.py
+[ui]
+username=kecebongsoft
+[flow]
+autoshelve=true

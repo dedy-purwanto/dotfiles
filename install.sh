@@ -5,6 +5,8 @@ while true; do
         [Yy]* ) 
             cp zshrc ~/.zshrc;
             cp vimrc ~/.vimrc;
+            cp gitconfig ~/.gitconfig;
+            cp hgrc ~/.hgrc;
             cp minimal.zsh-theme ~/.oh-my-zsh/themes/;
             break;;
         [Nn]* ) exit;;
