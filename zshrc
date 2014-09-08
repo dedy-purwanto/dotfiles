@@ -72,8 +72,6 @@ function gentag() {
     pwd | xargs ctags -f ~/.tags/$1 ~/.envs/$1/
     sed -i '' '/[iv]$/d' ~/.tags/$1
     sed -i '' '/[iv]	/d' ~/.tags/$1
-    sed -i '' '/tests\//d' ~/.tags/$1
 }
 alias gt=gentag
-
 source ~/.host_alias
