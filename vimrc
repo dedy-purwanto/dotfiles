@@ -100,7 +100,7 @@ nnoremap <leader>q <C-w>l:bp<cr>:bd #<cr>
 nnoremap <leader>Q <C-w>l:bp<cr>:bd! #<cr>
 nnoremap <leader>w <C-w>l:w<cr>
 " PLUGIN CONFIGURATIONS -----------------------------
-nnoremap <leader>n :NERDTreeFocusToggle<cr>
+nnoremap <leader>n :NERDTreeToggle<cr>
 nnoremap <silent><leader>u  :GundoToggle<cr>
 nnoremap <leader>d :YcmCompleter GoToDeclaration<cr>
 nnoremap <silent><leader>y :YRShow<cr>
