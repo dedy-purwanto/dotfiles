@@ -123,3 +123,4 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeIgnore = ['\.pyc$']
 let g:NERDTreeWinSize = 50
+let g:yankring_history_dir = '/var/tmp/'

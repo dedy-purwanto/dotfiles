@@ -64,7 +64,7 @@ PATH=/usr/local/Cellar/gettext/0.18.3.1/bin:$PATH
 alias pyclear="find . -name '*.pyc' | xargs rm"
 alias gitclear="find . -name '*.orig' | xargs rm"
 alias w='workon'
-alias pass='/usr/bin/python ~/workspaces/pass/pass.py'
+alias pass='/usr/bin/python ~/workspaces/libs/pass/pass.py'
 alias catn='pygmentize -g'
 alias ctags='/usr/local/bin/ctags'
 
