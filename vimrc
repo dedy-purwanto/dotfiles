@@ -122,5 +122,5 @@ let g:yankring_replace_n_pkey = '<c-+>'
 let NERDTreeShowLineNumbers=1
 let NERDTreeAutoDeleteBuffer=1
 let NERDTreeIgnore = ['\.pyc$']
-let g:NERDTreeWinSize = 50
+let g:NERDTreeWinSize = 30
 let g:yankring_history_dir = '/var/tmp/'

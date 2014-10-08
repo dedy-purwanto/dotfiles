@@ -41,6 +41,7 @@ export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/include/
 export PATH=$PATH:/Users/kecebongsoft/workspaces/opengrads/Contents/
 export PATH=$PATH:/Users/kecebongsoft/Documents/adt-bundle-mac-x86_64-20140702/sdk/tools/
 export PATH=$PATH:/Users/kecebongsoft/Documents/adt-bundle-mac-x86_64-20140702/sdk/platforms/
+export PATH=$PATH:/Users/kecebongsoft/Documents/adt-bundle-mac-x86_64-20140702/sdk/platform-tools/
 export PATH=$PATH:/Users/kecebongsoft/Documents/apache-ant-1.9.4/bin/
 export PATH=$PATH:/usr/local/mysql-5.6.20-osx10.7-x86_64/lib/
 export JAVA_HOME=$(/usr/libexec/java_home)
