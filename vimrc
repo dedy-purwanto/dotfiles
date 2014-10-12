@@ -61,8 +61,8 @@ set wildignore+=.hg,.git,.svn,*.aux,*.out,*.toc,*.jpg,*.bmp,*.gif,*.png,*.jpeg,*
 set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
-colorscheme gotham
-hi VertSplit ctermbg=0 ctermfg=0 term=reverse
+colorscheme Tomorrow
+hi VertSplit ctermbg=255 ctermfg=0 term=reverse
 let mapleader =" "
 inoremap jk <ESC>
 nnoremap <C-c> <ESC>

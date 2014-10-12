@@ -39,9 +39,9 @@ export PATH=$PATH:/opt/X11/lib/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/bin/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/include/
 export PATH=$PATH:/Users/kecebongsoft/workspaces/opengrads/Contents/
-export PATH=$PATH:/Users/kecebongsoft/Workspaces/lib/android-sdk/tools/
-export PATH=$PATH:/Users/kecebongsoft/Workspaces/lib/android-sdk/platforms/
-export PATH=$PATH:/Users/kecebongsoft/Workspaces/lib/android-sdk/platform-tools/
+export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/tools/
+export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/platforms/
+export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/platform-tools/
 export PATH=$PATH:/usr/local/mysql-5.6.20-osx10.7-x86_64/lib/
 export JAVA_HOME=$(/usr/libexec/java_home)
 export C_INCLUDE_PATH=C_INCLUDE_PATH:/Applications/Postgres.app/Contents/MacOS/include/
@@ -67,6 +67,8 @@ alias w='workon'
 alias pass='/usr/bin/python ~/workspaces/libs/pass/pass.py'
 alias catn='pygmentize -g'
 alias ctags='/usr/local/bin/ctags'
+
+unsetopt correct_all
 
 function gentag() {
     pwd | xargs ctags -f ~/.tags/$1 ~/.envs/$1/
