@@ -71,7 +71,8 @@ alias pass='/usr/bin/python ~/workspaces/libs/pass/pass.py'
 alias ctags='/usr/local/bin/ctags'
 alias gt=gentag
 
-unsetopt correct_all
 source $ZSH/oh-my-zsh.sh
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/.host_alias
+
+unsetopt correct_all
