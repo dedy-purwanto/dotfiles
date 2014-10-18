@@ -67,7 +67,6 @@ alias gitclear="find . -name '*.orig' | xargs rm"
 alias pip="pip --timeout=280"
 alias rmswap="sudo find /var/tmp -name '*.swp' | xargs sudo rm"
 alias w='workon'
-alias pass='/usr/bin/python ~/workspaces/libs/pass/pass.py'
 alias ctags='/usr/local/bin/ctags'
 alias gt=gentag
 

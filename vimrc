@@ -68,6 +68,7 @@ nnoremap / /\v
 nnoremap <silent><leader>c :noh<cr>
 nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>er :source ~/.vimrc<cr>
+nnoremap <leader>f :e.<cr>
 "Insert blank line above/below cursors
 nnoremap <leader>j :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <leader>k :set paste<CR>m`O<Esc>``:set nopaste<CR>
@@ -76,7 +77,6 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Run buffer as scripts
 nnoremap <silent><leader>1 :w !python<cr>
 nnoremap <silent><leader>2 :w !bash<cr>
-nnoremap <silent><leader>0 :enew<cr>
 " Paste and move cursor to the end of the line
 vnoremap <silent> y y`]
 vnoremap <silent> p p`]
@@ -90,8 +90,8 @@ nnoremap <silent><C-h> :bprevious<cr>
 nnoremap <silent><C-l> :bnext<cr>
 inoremap <silent><C-h> <esc>:bprevious<cr>
 inoremap <silent><C-l> <esc>:bnext<cr>
-" Closes buffer without saving
-nnoremap <leader>Q :bd! #<cr>
+nnoremap <leader>q :bd<cr>
+nnoremap <leader>Q :bd!<cr>
 nnoremap <leader>w :w<cr>
 " PLUGIN CONFIGURATIONS -----------------------------
 nnoremap <silent><leader>u  :GundoToggle<cr>
