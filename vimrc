@@ -58,7 +58,7 @@ set wildignore+=.hg,.git,.svn,*.aux,*.out,*.toc,*.jpg,*.bmp,*.gif,*.png,*.jpeg,*
 set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
-colorscheme Gotham
+colorscheme Tomorrow
 hi VertSplit ctermbg=255 ctermfg=0 term=reverse
 let mapleader =" "
 inoremap jk <ESC>
@@ -114,3 +114,4 @@ let g:ctrlp_max_height = 25
 let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:yankring_replace_n_pkey = '<c-+>'
 let g:yankring_history_dir = '/var/tmp/'
+let g:NERDTreeShowLineNumbers = 1
