@@ -58,7 +58,7 @@ set wildignore+=.hg,.git,.svn,*.aux,*.out,*.toc,*.jpg,*.bmp,*.gif,*.png,*.jpeg,*
 set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
-colorscheme Tomorrow
+colorscheme Gotham
 hi VertSplit ctermbg=255 ctermfg=0 term=reverse
 let mapleader =" "
 inoremap jk <ESC>
@@ -69,7 +69,7 @@ nnoremap / /\v
 nnoremap <silent><leader>c :noh<cr>
 nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>er :source ~/.vimrc<cr>
-nnoremap <leader>f :e.<cr>
+nnoremap <leader>f :NERDTreeToggle<cr>
 "Insert blank line above/below cursors
 nnoremap <leader>j :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <leader>k :set paste<CR>m`O<Esc>``:set nopaste<CR>
@@ -115,3 +115,4 @@ let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:yankring_replace_n_pkey = '<c-+>'
 let g:yankring_history_dir = '/var/tmp/'
 let g:NERDTreeShowLineNumbers = 1
+let g:NERDTreeIgnore = ['\.pyc$']
