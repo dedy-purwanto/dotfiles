@@ -9,9 +9,5 @@
 [push]
 	default = matching
 
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-
 [merge]
 	ff = false
