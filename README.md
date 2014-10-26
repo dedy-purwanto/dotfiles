@@ -1,4 +1,4 @@
 dot files
 =============
 
-List of my personal dot files
+List of my personal dot files.
