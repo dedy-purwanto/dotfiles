@@ -41,6 +41,7 @@ Bundle 'vim-scripts/YankRing.vim'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'whatyouhide/vim-gotham'
 Bundle 'scrooloose/nerdtree'
+Bundle 'chriskempson/base16-vim'
 
 filetype plugin indent on
 syntax enable
@@ -59,7 +60,7 @@ set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
 colorscheme Gotham
-hi VertSplit ctermbg=255 ctermfg=0 term=reverse
+hi VertSplit ctermbg=0 ctermfg=0 term=reverse
 let mapleader =" "
 inoremap jk <ESC>
 nnoremap <C-c> <ESC>
@@ -116,3 +117,5 @@ let g:yankring_replace_n_pkey = '<c-+>'
 let g:yankring_history_dir = '/var/tmp/'
 let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeIgnore = ['\.pyc$']
+let g:NERDTreeWinSize = 40 
+
