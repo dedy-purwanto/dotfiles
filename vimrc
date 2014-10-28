@@ -25,8 +25,6 @@ Bundle 'Valloric/YouCompleteMe'
 " Snippet engine and snipet lists
 Bundle 'honza/vim-snippets'
 Bundle 'SirVer/ultisnips'
-" Text swap plugin
-Bundle 'tommcdo/vim-exchange'
 " Undo tree
 Bundle 'sjl/gundo.vim.git'
 " Highlight matching HTML tags
@@ -39,18 +37,18 @@ Bundle 'JazzCore/ctrlp-cmatcher'
 Bundle 'vim-scripts/YankRing.vim'
 " Python checking, I prefer this to syntastic
 Bundle 'kevinw/pyflakes-vim'
+" Color schemes
 Bundle 'whatyouhide/vim-gotham'
-Bundle 'scrooloose/nerdtree'
 Bundle 'chriskempson/base16-vim'
+" File management
+Bundle 'vim-scripts/FuzzyFinder'
 
 filetype plugin indent on
 syntax enable
 set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile relativenumber smartcase gdefault incsearch showmatch breakindent
 set hlsearch lazyredraw splitright splitbelow ttimeout notimeout nottimeout autoindent shiftround autoread nobackup wrap list hidden
 set shell=/bin/bash tabstop=4 shiftwidth=4 softtabstop=4 laststatus=2 linespace=1 scrolloff=3 history=100 undoreload=10000 scrolljump=8 matchtime=3
-set modelines=0 encoding=utf-8 textwidth=72 clipboard=unnamed background=light mouse=a backspace=2 completeopt-=preview t_Co=256 colorcolumn=81
-set showbreak=↪
-set wildmode=list:longest "Show full item on the dropdown
+set modelines=0 encoding=utf-8 textwidth=72 clipboard=unnamed background=light mouse=a backspace=2 completeopt-=preview t_Co=256 colorcolumn=81 showbreak=↪ wildmode=list:longest
 set fillchars=diff:\  "Show latest changed stuff in the status line when available
 set dictionary=/usr/share/dict/words
 set formatoptions=qrn1 "Format for pasting text
@@ -70,7 +68,8 @@ nnoremap / /\v
 nnoremap <silent><leader>c :noh<cr>
 nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>er :source ~/.vimrc<cr>
-nnoremap <leader>f :NERDTreeToggle<cr>
+nnoremap <leader>f :FufFile<cr>
+nnoremap <leader>g :FufBuffer<cr>
 "Insert blank line above/below cursors
 nnoremap <leader>j :set paste<CR>m`o<Esc>``:set nopaste<CR>
 nnoremap <leader>k :set paste<CR>m`O<Esc>``:set nopaste<CR>
@@ -87,25 +86,17 @@ nnoremap <silent> p p`]
 noremap gV `[v`]
 " Disable man page shortcut
 nnoremap <S-k> <ESC>
-" Moving between buffers, integrates nicely with Airline
-nnoremap <silent><C-h> :bprevious<cr>
-nnoremap <silent><C-l> :bnext<cr>
-inoremap <silent><C-h> <esc>:bprevious<cr>
-inoremap <silent><C-l> <esc>:bnext<cr>
 nnoremap <leader>q :bd<cr>
 nnoremap <leader>Q :bd!<cr>
 nnoremap <leader>w :w<cr>
 " PLUGIN CONFIGURATIONS -----------------------------
-nnoremap <silent><leader>u  :GundoToggle<cr>
 nnoremap <leader>d :YcmCompleter GoToDeclaration<cr>
 nnoremap <silent><leader>y :YRShow<cr>
-nnoremap <silent><C-b> :CtrlPBuffer<cr>
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:ycm_key_list_previous_completion = ['<Up>'] " Remove S-Tab for UltiSips
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 let g:ctrlp_match_func = {'match' : 'matcher#cmatch' }
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_files = 0
@@ -115,7 +106,3 @@ let g:ctrlp_max_height = 25
 let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:yankring_replace_n_pkey = '<c-+>'
 let g:yankring_history_dir = '/var/tmp/'
-let g:NERDTreeShowLineNumbers = 1
-let g:NERDTreeIgnore = ['\.pyc$']
-let g:NERDTreeWinSize = 40 
-
