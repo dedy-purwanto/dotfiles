@@ -24,7 +24,7 @@ export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/lib/
 export PATH=$PATH:/opt/X11/lib/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/bin/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/include/
-export PATH=$PATH:/Users/kecebongsoft/workspaces/opengrads/Contents/
+export PATH=$PATH:/Users/kecebongsoft/workspaces/libs/opengrads/Contents/
 export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/tools/
 export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/platforms/
 export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/platform-tools/
@@ -64,6 +64,7 @@ alias rmswap="sudo find /var/tmp -name '*.swp' | xargs sudo rm"
 alias w='workon'
 alias ctags='/usr/local/bin/ctags'
 alias gt=gentag
+alias grads=/Users/kecebongsoft/Workspaces/libs/opengrads/Contents/grads
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/bin/virtualenvwrapper.sh
