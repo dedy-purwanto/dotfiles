@@ -59,7 +59,7 @@ alias pg_config='/Applications/Postgres.app/Contents/MacOS/bin/pg_config'
 alias gettext=/usr/local/Cellar/gettext/0.18.3.1/bin/gettext
 alias pyclear="find . -name '*.pyc' | xargs rm"
 alias gitclear="find . -name '*.orig' | xargs rm"
-alias pip="pip --timeout=280"
+alias pip="pip"
 alias rmswap="sudo find /var/tmp -name '*.swp' | xargs sudo rm"
 alias w='workon'
 alias ctags='/usr/local/bin/ctags'
