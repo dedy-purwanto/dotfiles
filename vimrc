@@ -89,7 +89,7 @@ nnoremap <S-k> <ESC>
 nnoremap <leader>q :bd<cr>
 nnoremap <leader>Q :bd!<cr>
 nnoremap <leader>w :w<cr>
-" PLUGIN CONFIGURATIONS -----------------------------
+" PLUGIN CONFIGURATIONS
 nnoremap <leader>d :YcmCompleter GoToDeclaration<cr>
 nnoremap <silent><leader>y :YRShow<cr>
 let g:UltiSnipsExpandTrigger="<c-j>"
