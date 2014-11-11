@@ -68,7 +68,7 @@ nnoremap / /\v
 nnoremap <silent><leader>c :noh<cr>
 nnoremap <leader>ev :e ~/.vimrc<cr>
 nnoremap <leader>er :source ~/.vimrc<cr>
-nnoremap <leader>f :FufFile<cr>
+nnoremap <leader>f :FufRenewCache<cr>:FufFile<cr>
 nnoremap <leader>g :FufBuffer<cr>
 "Insert blank line above/below cursors
 nnoremap <leader>j :set paste<CR>m`o<Esc>``:set nopaste<CR>
