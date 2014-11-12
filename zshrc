@@ -53,7 +53,7 @@ alias push='git push'
 alias feature='git flow feature start'
 alias hotfix='git flow hotfix start'
 
-alias psql='/Applications/Postgres.app/Contents/MacOS/bin/psql'
+alias psql='/Applications/Postgres.app/Contents/MacOS/bin/psql -h localhost'
 alias pg_dump='/Applications/Postgres.app/Contents/MacOS/bin/pg_dump'
 alias pg_config='/Applications/Postgres.app/Contents/MacOS/bin/pg_config'
 alias gettext=/usr/local/Cellar/gettext/0.18.3.1/bin/gettext
