@@ -8,6 +8,8 @@ while true; do
             ln -s -f `pwd`/gitconfig ~/.gitconfig;
             ln -s -f `pwd`/hgrc ~/.hgrc;
             ln -s -f `pwd`/minimal.zsh-theme ~/.oh-my-zsh/themes/;
+            ln -s -f `pwd`/tmux.conf ~/.tmux.conf;
+            ln -s -f `pwd`/tmuxinator/* ~/.tmuxinator/;
             break;;
         [Nn]* ) exit;;
         * ) echo "Please answer yes or no.";;
