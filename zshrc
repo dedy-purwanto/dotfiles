@@ -68,6 +68,8 @@ alias w='workon'
 alias ctags='/usr/local/bin/ctags'
 alias gt=gentag
 alias grads=/Users/kecebongsoft/Workspaces/libs/opengrads/Contents/grads
+alias sa='tmuxinator start sa'
+alias sass-compile='sudo sass -r sass-globbing style.scss ../css/style.css'
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/bin/virtualenvwrapper.sh
