@@ -18,8 +18,6 @@ Bundle 'Lokaltog/vim-easymotion.git'
 Bundle 'airblade/vim-gitgutter.git'
 " Awesome HAML to HTML by CTRL-E on HTML files
 Bundle 'rstacruz/sparkup'
-" Auto close scope (brackets, quotes, etc)
-Bundle 'Raimondi/delimitMate'
 " Awesome completion
 Bundle 'Valloric/YouCompleteMe'
 " Snippet engine and snipet lists
@@ -48,7 +46,7 @@ syntax enable
 set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile relativenumber smartcase gdefault incsearch showmatch breakindent
 set hlsearch lazyredraw splitright splitbelow ttimeout notimeout nottimeout autoindent shiftround autoread nobackup wrap list hidden
 set shell=/bin/bash tabstop=4 shiftwidth=4 softtabstop=4 laststatus=2 linespace=1 scrolloff=3 history=100 undoreload=10000 scrolljump=8 matchtime=3
-set modelines=0 encoding=utf-8 textwidth=72 clipboard=unnamed background=light mouse=a backspace=2 completeopt-=preview t_Co=256 colorcolumn=81 showbreak=↪ wildmode=list:longest
+set modelines=0 encoding=utf-8 textwidth=72 clipboard=unnamed background=dark mouse=a backspace=2 completeopt-=preview t_Co=256 colorcolumn=81 showbreak=↪ wildmode=list:longest
 set fillchars=diff:\  "Show latest changed stuff in the status line when available
 set dictionary=/usr/share/dict/words
 set formatoptions=qrn1 "Format for pasting text
@@ -57,7 +55,7 @@ set wildignore+=.hg,.git,.svn,*.aux,*.out,*.toc,*.jpg,*.bmp,*.gif,*.png,*.jpeg,*
 set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
-colorscheme Tomorrow
+colorscheme Tomorrow-Night
 hi VertSplit ctermbg=0 ctermfg=0 term=reverse
 let mapleader =" "
 inoremap jk <ESC>
@@ -106,3 +104,6 @@ let g:ctrlp_max_height = 25
 let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:yankring_replace_n_pkey = '<c-+>'
 let g:yankring_history_dir = '/var/tmp/'
+
+" Macros
+let @t="c{% trans \"\" %}jk4hp" " Surround selected text with trans

@@ -24,6 +24,8 @@ export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/lib/
 export PATH=$PATH:/opt/X11/lib/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/bin/
 export PATH=$PATH:/Library/Postgres.app/Contents/MacOS/include/
+export PATH=$PATH:/Applications/Postgres.app/Contents/MacOS/include/
+export PATH=$PATH:/Applications/Postgres.app/Contents/MacOS/include/server/
 export PATH=$PATH:/Users/kecebongsoft/workspaces/libs/opengrads/Contents/
 export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/tools/
 export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/platforms/
@@ -31,8 +33,9 @@ export PATH=$PATH:/Users/kecebongsoft/Workspaces/libs/android-sdk/platform-tools
 export PATH=$PATH:/usr/local/mysql-5.6.20-osx10.7-x86_64/lib/
 export PATH=$PATH:/usr/local/Cellar/gettext/0.18.3.1/bin
 export JAVA_HOME=$(/usr/libexec/java_home)
-export C_INCLUDE_PATH=C_INCLUDE_PATH:/Applications/Postgres.app/Contents/MacOS/include/
-export C_INCLUDE_PATH=C_INCLUDE_PATH:/usr/local/mysql-5.6.20-osx10.7-x86_64/include/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/Applications/Postgres.app/Contents/MacOS/include/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/Applications/Postgres.app/Contents/MacOS/include/server/
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/mysql-5.6.20-osx10.7-x86_64/include/
 export DYLD_LIBRARY_PATH="/Library/Postgres.app/Contents/MacOS/include/:$DYLD_LIBRARY_PATH"
 export DYLD_LIBRARY_PATH="/usr/local/mysql-5.6.20-osx10.7-x86_64/lib/:$DYLD_LIBRARY_PATH"
 export CFLAGS=-Qunused-arguments
@@ -69,5 +72,6 @@ alias grads=/Users/kecebongsoft/Workspaces/libs/opengrads/Contents/grads
 source $ZSH/oh-my-zsh.sh
 source /usr/local/bin/virtualenvwrapper.sh
 source ~/.host_alias
+bindkey '^R' history-incremental-pattern-search-backward
 
 unsetopt correct_all
