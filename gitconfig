@@ -1,17 +1,13 @@
 [user]
-	name = Dedi Purwanto
-	email = kecebongsoft@gmail.com
-
+name = Dedi Purwanto
+email = kecebongsoft@gmail.com
 [core]
-	editor = vim
-    mergeoptions = --no-edit
-
+editor = vim
+mergeoptions = --no-edit
 [push]
-	default = matching
-
+default = matching
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-
+clean = git-media-clean %f
+smudge = git-media-smudge %f
 [merge]
-	ff = false
+ff = false
