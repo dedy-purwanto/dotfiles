@@ -77,3 +77,4 @@ source ~/.host_alias
 bindkey '^R' history-incremental-pattern-search-backward
 
 unsetopt correct_all
+source ~/.dircolors

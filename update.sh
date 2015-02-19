@@ -7,3 +7,4 @@ cp ~/.gitconfig gitconfig
 mkdir tmuxinator
 cp ~/.tmuxinator/* tmuxinator/
 cp ~/.tmux.conf tmux.conf
+cp ~/.dircolors dircolors
