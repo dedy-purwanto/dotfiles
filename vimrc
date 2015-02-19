@@ -43,7 +43,7 @@ Bundle 'vim-scripts/FuzzyFinder'
 
 filetype plugin indent on
 syntax enable
-set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile relativenumber smartcase gdefault incsearch showmatch breakindent
+set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile relativenumber smartcase gdefault incsearch showmatch breakindent nocursorline
 set hlsearch lazyredraw splitright splitbelow ttimeout notimeout nottimeout autoindent shiftround autoread nobackup wrap list hidden
 set shell=/bin/bash tabstop=4 shiftwidth=4 softtabstop=4 laststatus=2 linespace=1 scrolloff=3 history=100 undoreload=10000 scrolljump=8 matchtime=3
 set modelines=0 encoding=utf-8 textwidth=72 clipboard=unnamedplus background=dark mouse=a backspace=2 completeopt-=preview t_Co=256 colorcolumn=81 showbreak=↪ wildmode=list:longest
@@ -56,7 +56,19 @@ set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
 colorscheme Tomorrow-Night
-hi VertSplit ctermbg=0 ctermfg=0 term=reverse
+hi LineNr ctermfg=darkblue
+hi Search ctermbg=darkblue ctermfg=white
+hi MatchParen ctermbg=black ctermfg=darkgreen
+hi Visual ctermbg=13 ctermfg=green
+" hi String ctermfg=blue
+" hi SpellBad ctermbg=1
+hi ColorColumn ctermbg=black ctermfg=darkgreen
+" hi SignColumn ctermbg=0
+" hi GitGutterAdd ctermbg=green
+" hi GitGutterChange ctermbg=yellow
+" hi GitGutterDelete ctermbg=red
+" hi GitGutterChangeDelete ctermbg=yellow
+" hi VertSplit ctermbg=0 ctermfg=0 term=reverse
 let mapleader =" "
 inoremap jk <ESC>
 nnoremap <C-c> <ESC>
