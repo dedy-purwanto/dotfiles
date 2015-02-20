@@ -59,8 +59,8 @@ colorscheme Tomorrow-Night
 hi LineNr ctermfg=darkblue
 hi Search ctermbg=darkblue ctermfg=white
 hi MatchParen ctermbg=black ctermfg=darkgreen
-hi Visual ctermbg=13 ctermfg=green
-" hi String ctermfg=blue
+hi Visual ctermbg=cyan ctermfg=black
+hi String ctermfg=blue
 " hi SpellBad ctermbg=1
 hi ColorColumn ctermbg=black ctermfg=darkgreen
 " hi SignColumn ctermbg=0
@@ -69,6 +69,7 @@ hi ColorColumn ctermbg=black ctermfg=darkgreen
 " hi GitGutterDelete ctermbg=red
 " hi GitGutterChangeDelete ctermbg=yellow
 " hi VertSplit ctermbg=0 ctermfg=0 term=reverse
+hi EasyMotionShade ctermfg=blue
 let mapleader =" "
 inoremap jk <ESC>
 nnoremap <C-c> <ESC>
