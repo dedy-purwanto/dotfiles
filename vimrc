@@ -55,7 +55,7 @@ set wildignore+=.hg,.git,.svn,*.aux,*.out,*.toc,*.jpg,*.bmp,*.gif,*.png,*.jpeg,*
 set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
-colorscheme Tomorrow-Night
+colorscheme base16-solarized
 hi LineNr ctermfg=darkblue
 hi Search ctermbg=darkblue ctermfg=white
 hi MatchParen ctermbg=black ctermfg=darkgreen
@@ -70,6 +70,7 @@ hi ColorColumn ctermbg=black ctermfg=darkgreen
 " hi GitGutterChangeDelete ctermbg=yellow
 " hi VertSplit ctermbg=0 ctermfg=0 term=reverse
 hi EasyMotionShade ctermfg=blue
+hi Normal ctermbg=0
 let mapleader =" "
 inoremap jk <ESC>
 nnoremap <C-c> <ESC>
