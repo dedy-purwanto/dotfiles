@@ -43,6 +43,7 @@ export PATH=$PATH:/usr/local/Cellar/gettext/0.18.3.1/bin
 export WORKON_HOME=$HOME/.envs/
 #export VIRTUALENVWRAPPER_HOOK_DIR=$HOME/.envs/
 #export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export TERM="xterm-256color"
 
 alias gs="git status"
 alias ga="git add"
