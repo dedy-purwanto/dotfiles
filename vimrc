@@ -119,6 +119,11 @@ let g:ctrlp_max_height = 25
 let g:ctrlp_extensions = ['tag', 'buffertag']
 let g:yankring_replace_n_pkey = '<c-+>'
 let g:yankring_history_dir = '/var/tmp/'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_modified_removed = '~'
+let g:gitgutter_sign_removed_first_line = '-'
 
 " Macros
 let @t="c{% trans \"\" %}jk4hp" " Surround selected text with trans
