@@ -56,19 +56,20 @@ set backupskip=/tmp/*,/private/tmp/*"
 set dir=~/.vim/swaps//,/var/tmp//,/tmp//,.
 set undodir=~/.vim/undos//,/var/tmp//,/tmp//,.
 colorscheme base16-solarized
-hi LineNr ctermfg=darkblue
+hi LineNr ctermfg=darkblue ctermbg=0
+hi CursorLineNr ctermfg=darkblue ctermbg=0
 hi Search ctermbg=darkblue ctermfg=white
 hi MatchParen ctermbg=black ctermfg=darkgreen
 hi Visual ctermbg=cyan ctermfg=black
 hi String ctermfg=blue
 " hi SpellBad ctermbg=1
 hi ColorColumn ctermbg=black ctermfg=darkgreen
-" hi SignColumn ctermbg=0
-" hi GitGutterAdd ctermbg=green
-" hi GitGutterChange ctermbg=yellow
-" hi GitGutterDelete ctermbg=red
-" hi GitGutterChangeDelete ctermbg=yellow
-" hi VertSplit ctermbg=0 ctermfg=0 term=reverse
+hi SignColumn ctermbg=0
+hi GitGutterAdd ctermbg=0
+hi GitGutterChange ctermbg=0
+hi GitGutterDelete ctermbg=0
+hi GitGutterChangeDelete ctermbg=0
+hi VertSplit ctermbg=0 ctermfg=0 term=reverse
 hi EasyMotionShade ctermfg=blue
 hi Normal ctermbg=0
 let mapleader =" "

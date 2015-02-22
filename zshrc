@@ -79,3 +79,6 @@ bindkey '^R' history-incremental-pattern-search-backward
 
 unsetopt correct_all
 source ~/.dircolors
+
+bindkey ^N forward-word
+bindkey ^P backward-word

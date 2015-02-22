@@ -18,7 +18,7 @@ vcs_status() {
 env_status() {
     ENV_NAME=$(basename "$VIRTUAL_ENV")
     if [[ $ENV_NAME != "" ]]; then
-        echo "%{$reset_color%}%{$fg[blue]%}$ENV_NAME%{$reset_color%} "
+        echo "%{$reset_color%}%{$FG[099]%}$ENV_NAME%{$reset_color%} "
     fi
 
 }
