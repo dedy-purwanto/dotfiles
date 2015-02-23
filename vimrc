@@ -2,44 +2,44 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'vim-scripts/L9'
+Plugin 'gmarik/vundle'
+Plugin 'vim-scripts/L9'
 " My favorite color scheme, solarised no more.
-Bundle 'chriskempson/vim-tomorrow-theme'
+Plugin 'chriskempson/vim-tomorrow-theme'
 " String substitute for plural / singular (context sensitive)
-Bundle 'tpope/vim-abolish.git'
+Plugin 'tpope/vim-abolish.git'
 " Language-agnostic commenting plugin
-Bundle 'tpope/vim-commentary.git'
+Plugin 'tpope/vim-commentary.git'
 " Status line, buffer shown like 'tabs'
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 " Awesome jumping to text
-Bundle 'Lokaltog/vim-easymotion.git'
+Plugin 'Lokaltog/vim-easymotion.git'
 " Showing git diff
-Bundle 'airblade/vim-gitgutter.git'
+Plugin 'airblade/vim-gitgutter.git'
 " Awesome HAML to HTML by CTRL-E on HTML files
-Bundle 'rstacruz/sparkup'
+Plugin 'rstacruz/sparkup'
 " Awesome completion
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 " Snippet engine and snipet lists
-Bundle 'honza/vim-snippets'
-Bundle 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'SirVer/ultisnips'
 " Undo tree
-Bundle 'sjl/gundo.vim.git'
+Plugin 'sjl/gundo.vim.git'
 " Highlight matching HTML tags
-Bundle 'Valloric/MatchTagAlways'
+Plugin 'Valloric/MatchTagAlways'
 " File and tags quick open
-Bundle 'kien/ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 " More accuracy and speed on CtrlP, needs compiling
-Bundle 'JazzCore/ctrlp-cmatcher'
+Plugin 'JazzCore/ctrlp-cmatcher'
 " Yank history management
-Bundle 'vim-scripts/YankRing.vim'
+Plugin 'vim-scripts/YankRing.vim'
 " Python checking, I prefer this to syntastic
-Bundle 'kevinw/pyflakes-vim'
+Plugin 'kevinw/pyflakes-vim'
 " Color schemes
-Bundle 'whatyouhide/vim-gotham'
-Bundle 'chriskempson/base16-vim'
+Plugin 'whatyouhide/vim-gotham'
+Plugin 'chriskempson/base16-vim'
 " File management
-Bundle 'vim-scripts/FuzzyFinder'
+Plugin 'vim-scripts/FuzzyFinder'
 
 filetype plugin indent on
 syntax enable
