@@ -43,7 +43,7 @@ Plugin 'vim-scripts/FuzzyFinder'
 
 filetype plugin indent on
 syntax enable
-set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile relativenumber smartcase gdefault incsearch showmatch breakindent nocursorline
+set nomore ttyfast expandtab ignorecase showmode showcmd nohidden wildmenu cursorline ruler undofile relativenumber smartcase gdefault incsearch showmatch nocursorline
 set hlsearch lazyredraw splitright splitbelow ttimeout notimeout nottimeout autoindent shiftround autoread nobackup wrap list hidden
 set shell=/bin/bash tabstop=4 shiftwidth=4 softtabstop=4 laststatus=2 linespace=1 scrolloff=3 history=100 undoreload=10000 scrolljump=8 matchtime=3
 set modelines=0 encoding=utf-8 textwidth=72 clipboard=unnamedplus background=dark mouse=a backspace=2 completeopt-=preview t_Co=256 colorcolumn=81 showbreak=↪ wildmode=list:longest
